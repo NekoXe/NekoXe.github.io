@@ -479,3 +479,14 @@ body {
     .version-detail-inner { padding: 10px 16px; }
     .spec-list { padding-left: 4px; }
 }
+@media (orientation: portrait) {
+    #thanks .version-summary {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 4px !important;
+    }
+    #thanks .version-summary .friend-link {
+        margin-left: 0 !important;
+        align-self: flex-start;
+    }
+}
