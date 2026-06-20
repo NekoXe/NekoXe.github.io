@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <title>NeoXe OS — 新一代内存操作系统</title>
+    <!-- Font Awesome 本地引用（5.15.4） -->
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- 本地 HarmonyOS Sans 字体 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 浏览器标签页图标 -->
+    <link rel="icon" href="./img/logo.png" type="image/png">
+</head>
+<body>
+<div class="bg-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+</div>
+<div class="win11-container">
+    <div class="app-header">
+        <div class="logo-area">
+            <!-- 修改 logo 图片为 PNG -->
+            <img src="/img/logo.png" alt="logo" class="logo-img" onerror="this.src='';"> 
+            <span class="logo-text">NeoXe OS</span>
+        </div>
+        <div class="theme-switch" id="themeToggleBtn">
+            <i id="themeIcon" class="fas fa-sun"></i>
+            <span id="themeLabel">浅色</span>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <button class="nav-btn active" data-page="home"><i class="fas fa-home"></i> 主页</button>
+        <button class="nav-btn" data-page="series"><i class="fas fa-layer-group"></i> 系列</button>
+        <button class="nav-btn" data-page="thanks"><i class="fas fa-heart"></i> 感谢</button>
+        <button class="nav-btn" data-page="about"><i class="fas fa-info-circle"></i> 关于</button>
+        <button class="nav-btn" data-page="faq"><i class="fas fa-question-circle"></i> 问答</button>
+        <button class="nav-btn" data-page="legal"><i class="fas fa-file-contract"></i> 声明</button>
+    </div>
+
+    <!-- 主页 -->
+    <div id="home" class="page-content active-page">
+        <div class="setting-section">
+            <div class="section-header"><i class="fas fa-rocket"></i> 欢迎使用 NeoXe OS</div>
+            <div class="version-summary" style="cursor:default;"><div><span class="version-title">新一代内存操作系统</span><div class="item-desc" style="margin-top:4px;">原生UWP · 纯净美观 · 多场景覆盖</div></div><div class="version-status"><i class="fas fa-microchip"></i> 2023.9 首次 UWPPE</div></div>
+            <div class="version-summary" style="cursor:default;"><div><span class="version-title">开发状态</span><div class="item-desc">努力Debug中</div></div><div class="version-status"><span class="version-position" style="background:#5A5E7A;">假期维护</span></div></div>
+        </div>
+        <div class="setting-section">
+            <div class="section-header"><i class="fas fa-star"></i> 明星系列</div>
+            <div class="version-summary" style="cursor:default;"><div class="star-item"><span class="star-name">Ultra</span><span class="star-badge">24H2</span></div><div class="version-status">旗舰全能 · 全功能体验</div></div>
+            <div class="version-summary" style="cursor:default;"><div class="star-item"><span class="star-name">Elite</span><span class="star-badge">23H2</span></div><div class="version-status">高级增强 · .NET/蓝牙/媒体</div></div>
+            <div class="version-summary" style="cursor:default;"><div class="star-item"><span class="star-name">Max</span><span class="star-badge">精致版</span></div><div class="version-status">主流性能 · 4GB RAM</div></div>
+            <div class="version-summary" style="cursor:default;"><div class="star-item"><span class="star-name">Slim</span><span class="star-badge">稳定版</span></div><div class="version-status">轻量均衡 · 2GB RAM适配</div></div>
+            <div class="version-summary" style="cursor:default;"><div class="star-item"><span class="star-name">SuperLite</span><span class="star-badge">379MB</span></div><div class="version-status">1GB内存运行UWP | 实验品·日用性不大</div></div>
+        </div>
+        <div class="setting-section">
+            <div class="section-header"><i class="fas fa-chart-line"></i> 社区数据</div>
+            <div class="version-summary" style="cursor:default;"><div>累计下载</div><div class="version-status">100+ (2026.6)</div></div>
+            <div class="version-summary" style="cursor:default;"><div>核心交流群</div><div class="version-status">90+ 极客</div></div>
+            <div class="version-summary" style="cursor:default;"><div>首制 UWPPE</div><div class="version-status">2023年9月</div></div>
+        </div>
+        <div class="setting-section">
+            <div class="section-header"><i class="fas fa-link"></i> 友情链接</div>
+            <div style="padding: 12px 16px;"><div class="friend-links"><a href="https://space.bilibili.com/3493129957149016" target="_blank" class="friend-link"><i class="fab fa-bilibili"></i> XeRiver的B站</a><a href="https://github.com/nekoxe" target="_blank" class="friend-link"><i class="fab fa-github"></i> GitHub</a><a href="https://qm.qq.com/q/1075906894" target="_blank" class="friend-link"><i class="fab fa-qq"></i> QQ群:1075906894</a></div></div>
+        </div>
+    </div>
+
+    <!-- 系列页 -->
+    <div id="series" class="page-content">
+        <div class="setting-section">
+            <div class="section-header"><i class="fas fa-cube"></i> 全系列详情</div>
+            <!-- Ultra -->
+            <div class="version-item" data-series="Ultra">
+                <div class="version-summary">
+                    <div class="version-left"><span class="version-title">Ultra</span><span class="version-position">旗舰全能</span></div>
+                    <div class="version-status">24H2 · 1.8GB+ <i class="fas fa-chevron-down expand-icon"></i></div>
+                </div>
+                <div class="version-detail-wrapper">
+                    <div class="version-detail"><div class="version-detail-inner">
+                        <div class="detail-row"><h4>规格详情</h4>
+                            <ul class="spec-list">
+                                <li><strong>1.</strong> 24H2 内核，原生 .NET 运行库</li>
+                                <li><strong>2.</strong> 原生 WLAN/蓝牙支持</li>
+                                <li><strong>3.</strong> Windows 聚焦主题 / Edge + IE 兼容</li>
+                                <li><strong>4.</strong> PowerShell 集成 + Windows Media Player</li>
+                                <li><strong>5.</strong> 推荐 8GB+ 内存，旗舰体验</li>
+                            </ul>
+                        </div>
+                        <div class="detail-row"><h4>预览图</h4><div class="img-group" id="imgGroup-Ultra"></div></div>
+                    </div></div>
+                </div>
+            </div>
+            <!-- Elite -->
+            <div class="version-item" data-series="Elite">
+                <div class="version-summary">
+                    <div class="version-left"><span class="version-title">Elite</span><span class="version-position">高级增强</span></div>
+                    <div class="version-status">23H2 · 1.25-1.35GB <i class="fas fa-chevron-down expand-icon"></i></div>
+                </div>
+                <div class="version-detail-wrapper"><div class="version-detail"><div class="version-detail-inner">
+                    <div class="detail-row"><h4>规格详情</h4><ul class="spec-list"><li><strong>1.</strong> 成熟 23H2 内核，稳定可靠</li><li><strong>2.</strong> 部分 .NET 运行库</li><li><strong>3.</strong> 原生 WLAN/蓝牙 / Windows 聚焦</li><li><strong>4.</strong> 媒体组件 + 触摸键盘支持</li><li><strong>5.</strong> 推荐 6GB+ 内存，功能接近 Ultra</li></ul></div>
+                    <div class="detail-row"><h4>预览图</h4><div class="img-group" id="imgGroup-Elite"></div></div>
+                </div></div></div>
+            </div>
+            <!-- Max -->
+            <div class="version-item" data-series="Max">
+                <div class="version-summary"><div class="version-left"><span class="version-title">Max</span><span class="version-position">主力均衡</span></div><div class="version-status">23H2 · 1.0GB <i class="fas fa-chevron-down expand-icon"></i></div></div>
+                <div class="version-detail-wrapper"><div class="version-detail"><div class="version-detail-inner">
+                    <div class="detail-row"><h4>规格详情</h4><ul class="spec-list"><li><strong>1.</strong> 内核 22631.2428 (23H2)</li><li><strong>2.</strong> 原生 UWP 设置 / 开始菜单 / 任务栏</li><li><strong>3.</strong> 集成基础驱动，网络支持</li><li><strong>4.</strong> 推荐 4GB 内存，日常主力</li></ul></div>
+                    <div class="detail-row"><h4>预览图</h4><div class="img-group" id="imgGroup-Max"></div></div>
+                </div></div></div>
+            </div>
+            <!-- Slim -->
+            <div class="version-item" data-series="Slim">
+                <div class="version-summary"><div class="version-left"><span class="version-title">Slim</span><span class="version-position">轻量稳定</span></div><div class="version-status">~22H2 · 2GB内存 <i class="fas fa-chevron-down expand-icon"></i></div></div>
+                <div class="version-detail-wrapper"><div class="version-detail"><div class="version-detail-inner">
+                    <div class="detail-row"><h4>规格详情</h4><ul class="spec-list"><li><strong>1.</strong> 针对 2GB 内存优化</li><li><strong>2.</strong> 保留 UWP 核心组件</li><li><strong>3.</strong> 极致轻量，启动迅速</li></ul></div>
+                    <div class="detail-row"><h4>预览图</h4><div class="img-group" id="imgGroup-Slim"></div></div>
+                </div></div></div>
+            </div>
+            <!-- SuperLite -->
+            <div class="version-item" data-series="SuperLite">
+                <div class="version-summary"><div class="version-left"><span class="version-title">SuperLite</span><span class="version-position">经典极限</span></div><div class="version-status">379MB · 1GB RAM <i class="fas fa-chevron-down expand-icon"></i></div></div>
+                <div class="version-detail-wrapper"><div class="version-detail"><div class="version-detail-inner">
+                    <div class="detail-row"><h4>规格详情</h4><ul class="spec-list"><li><strong>1.</strong> WinSxS 仅 10+ MB</li><li><strong>2.</strong> 原生登录 / UWP 任务栏</li><li><strong>3.</strong> 1GB 内存流畅运行</li><li><strong>4.</strong> 实验品，日用性不大</li></ul></div>
+                    <div class="detail-row"><h4>预览图</h4><div class="img-group" id="imgGroup-SuperLite"></div></div>
+                </div></div></div>
+            </div>
+            <!-- Arm -->
+            <div class="version-item" data-series="Arm">
+                <div class="version-summary"><div class="version-left"><span class="version-title">Arm</span><span class="version-position">原生ARM</span></div><div class="version-status">开发中 <i class="fas fa-chevron-down expand-icon"></i></div></div>
+                <div class="version-detail-wrapper"><div class="version-detail"><div class="version-detail-inner">
+                    <div class="detail-row"><h4>规格详情</h4><ul class="spec-list"><li><strong>1.</strong> 适配 ARM64 架构</li><li><strong>2.</strong> 移植 UWP 组件</li><li><strong>3.</strong> 支持部分Arm设备</li></ul></div>
+                    <div class="detail-row"><h4>预览图</h4><div class="img-group" id="imgGroup-Arm"></div></div>
+                </div></div></div>
+            </div>
+            <div style="padding: 12px 16px; background: var(--expand-bg); border-top: 1px solid var(--card-border); font-size: 0.75rem; color: var(--text-secondary); text-align: center;">
+                <i class="fas fa-download"></i> 如需下载 NeoXe OS 镜像，请关注B站 <strong>@XeRiver</strong> 或加入QQ群 <strong>1075906894</strong>
+            </div>
+        </div>
+    </div>
+
+<!-- 感谢页 -->
+<div id="thanks" class="page-content">
+    <div class="setting-section">
+        <div class="section-header"><i class="fas fa-heart"></i> 致谢贡献者</div>
+        <!-- XeRiver -->
+        <div class="version-summary" style="cursor:default; display:flex; align-items:center; gap:6px; flex-wrap:wrap; padding:10px 16px;">
+            <i class="fas fa-user-astronaut" style="width:20px;"></i>
+            <strong>XeRiver</strong>
+            <span style="color:var(--text-secondary);">— 主导规划者</span>
+            <a href="https://space.bilibili.com/3493129957149016" target="_blank" class="friend-link" style="margin-left:auto;">
+                <i class="fab fa-bilibili"></i> B站主页
+            </a>
+        </div>
+        <!-- Infinity -->
+        <div class="version-summary" style="cursor:default; display:flex; align-items:center; gap:6px; flex-wrap:wrap; padding:10px 16px;">
+            <i class="fas fa-laptop-code" style="width:20px;"></i>
+            <strong>Infinity</strong>
+            <span style="color:var(--text-secondary);">— 技术支持顾问</span>
+            <a href="https://space.bilibili.com/693966550" target="_blank" class="friend-link" style="margin-left:auto;">
+                <i class="fab fa-bilibili"></i> B站主页
+            </a>
+        </div>
+        <!-- MS-CHS -->
+        <div class="version-summary" style="cursor:default; display:flex; align-items:center; gap:6px; flex-wrap:wrap; padding:10px 16px;">
+            <i class="fas fa-bullhorn" style="width:20px;"></i>
+            <strong>MS-CHS</strong>
+            <span style="color:var(--text-secondary);">— 早期宣传与社区推广</span>
+            <a href="https://space.bilibili.com/1879337753" target="_blank" class="friend-link" style="margin-left:auto;">
+                <i class="fab fa-bilibili"></i> B站主页
+            </a>
+        </div>
+        <!-- 时光浅巷 -->
+        <div class="version-summary" style="cursor:default; display:flex; align-items:center; gap:6px; flex-wrap:wrap; padding:10px 16px;">
+            <i class="fas fa-palette" style="width:20px;"></i>
+            <strong>时光浅巷</strong>
+            <span style="color:var(--text-secondary);">— Logo设计</span>
+            <a href="https://space.bilibili.com/3493114677299679" target="_blank" class="friend-link" style="margin-left:auto;">
+                <i class="fab fa-bilibili"></i> B站主页
+            </a>
+        </div>
+    </div>
+    <!-- 社区致意 -->
+    <div class="setting-section">
+        <div class="section-header"><i class="fas fa-users"></i> 社区致意</div>
+        <div class="version-summary" style="cursor:default; padding:10px 16px;">
+            <div> 交流群90+ · 累计下载100+</div>
+        </div>
+    </div>
+</div>
+    <!-- 关于页 -->
+    <div id="about" class="page-content">
+        <div class="setting-section"><div class="section-header"><i class="fas fa-dragon"></i> 关于 NeoXe OS</div>
+            <div class="version-summary" style="cursor:default;"><div><strong>项目起源</strong><div class="item-desc">2023.9 首个UWPPE → 2025末规划品牌 → 2026正式推出</div></div></div>
+            <div class="version-summary" style="cursor:default;"><div><strong>技术哲学</strong><div class="item-desc">原生组件 · 高度集成 · 现代化</div></div></div>
+        </div>
+        <div class="setting-section"><div class="section-header"><i class="fas fa-user-astronaut"></i> 关于作者</div>
+            <div class="version-summary" style="cursor:default;"><div><strong>XeRiver</strong><div class="item-desc">湖南永州 · 开发者，学业繁忙</div></div><div class="version-status"><a href="https://space.bilibili.com/3493129957149016" target="_blank" style="color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;"><i class="fab fa-bilibili"></i> B站: XeRiver</a></div></div>
+        </div>
+        <div class="setting-section"><div class="section-header"><i class="fas fa-history"></i> 重要沿革</div>
+            <div class="version-summary" style="cursor:default;"><div>2023.9</div><div class="version-status">首个UWPPE</div></div>
+            <div class="version-summary" style="cursor:default;"><div>2025末</div><div class="version-status">规划NeoXe品牌</div></div>
+            <div class="version-summary" style="cursor:default;"><div>2026</div><div class="version-status">发布SuperLite 379MB</div></div>
+        </div>
+    </div>
+
+    <!-- 问答页 -->
+    <div id="faq" class="page-content">
+        <div class="setting-section"><div class="section-header"><i class="fas fa-question-circle"></i> 常见问题</div>
+            <div class="qa-item"><div class="qa-question">❓ 如何使用NeoXe OS？<i class="fas fa-chevron-down expand-icon"></i></div><div class="qa-answer-wrapper"><div class="qa-answer"><div class="qa-answer-inner"><strong>方法1（U盘启动）：</strong> 使用 Ventoy 或 Rufus 将 ISO 写入 U盘，从 U盘启动即可。<br><strong>方法2（本地硬盘引导）：</strong> 使用 EasyBCD（Windows）或 BOOTICE 添加 NeoXe OS 的 WIM 启动项。<br><strong>注意：</strong> 系统运行于内存，重启后更改丢失，适合维护/体验。</div></div></div></div>
+            <div class="qa-item"><div class="qa-question">❓ 硬件要求？<i class="fas fa-chevron-down expand-icon"></i></div><div class="qa-answer-wrapper"><div class="qa-answer"><div class="qa-answer-inner"><strong>CPU：</strong> 建议 Intel Nehalem 架构或更高 (64位)，AMD 推土机架构或更高。24H2版本需要 SSE4.2。<br><strong>内存：</strong> SuperLite 最低 1GB，Slim 推荐 2-4GB，Max 推荐 4GB，Elite 推荐 4GB+，Ultra 推荐 6GB+。<br><strong>SuperLite</strong> 可在单核 CPU + 1GB 内存下运行。支持 BIOS / UEFI。</div></div></div></div>
+            <div class="qa-item"><div class="qa-question">❓ 如何联网/装驱动？<i class="fas fa-chevron-down expand-icon"></i></div><div class="qa-answer-wrapper"><div class="qa-answer"><div class="qa-answer-inner">Ultra/Elite/Max/Slim内置部分网络驱动，WiFi可直接连接。个别硬件需手动注入驱动。</div></div></div></div>
+            <div class="qa-item"><div class="qa-question">❓ 为什么软件无法运行？<i class="fas fa-chevron-down expand-icon"></i></div><div class="qa-answer-wrapper"><div class="qa-answer"><div class="qa-answer-inner">缺少VC++/.NET运行库，请自行安装。</div></div></div></div>
+            <div class="qa-item"><div class="qa-question">❓ 能保存文件吗？<i class="fas fa-chevron-down expand-icon"></i></div><div class="qa-answer-wrapper"><div class="qa-answer"><div class="qa-answer-inner">重启后数据清零，重要文件请存至U盘/其他硬盘分区。持久化请使用WTG。</div></div></div></div>
+            <div class="qa-item"><div class="qa-question">❓ 最新版本去哪获取？<i class="fas fa-chevron-down expand-icon"></i></div><div class="qa-answer-wrapper"><div class="qa-answer"><div class="qa-answer-inner">关注B站 XeRiver 或 QQ群 1075906894，国内网盘同步更新。</div></div></div></div>
+        </div>
+    </div>
+
+    <!-- 声明与授权页 -->
+    <div id="legal" class="page-content">
+        <div class="setting-section">
+            <div class="section-header"><i class="fas fa-scale-balanced"></i> 用户协议与声明</div>
+            <div class="declaration-list">
+                <div class="declaration-item"><span class="decl-num">1.</span><span class="decl-text">本项目为非商用项目，所有资源禁止商用。</span></div>
+                <div class="declaration-item"><span class="decl-num">2.</span><span class="decl-text">禁止在 NeoXe OS 及其衍生作品中添加任何广告或用于盈利的信息。</span></div>
+                <div class="declaration-item"><span class="decl-num">3.</span><span class="decl-text">NeoXe OS 尽力保证安全与稳定，但使用本项目造成的任何损失，我们一律不负责。</span></div>
+                <div class="declaration-item"><span class="decl-num">4.</span><span class="decl-text">若需对 NeoXe OS 进行修改后二次发布，请先加入 QQ 群（1075906894）向群主获取授权。</span></div>
+                <div class="declaration-item"><span class="decl-num">5.</span><span class="decl-text">使用 NeoXe OS 即代表您同意并接受以上全部条款。</span></div>
+            </div>
+        </div>
+        <div class="setting-section">
+            <div class="section-header"><i class="fas fa-user-check"></i> 已授权人员</div>
+            <table class="auth-table"><thead><tr><th>授权人员</th><th>授权版本</th></tr></thead><tbody><tr><td colspan="2" style="text-align:center; color:var(--text-secondary);">暂无授权记录</td></tr></tbody></table>
+            <div class="auth-note"><i class="fas fa-info-circle"></i> 注：NeoXe OS 的授权仅限于被授权人本人及其对应的指定版本，<strong>不具有继承性</strong>。授权不可转让、不可用于其他版本或衍生作品。</div>
+        </div>
+    </div>
+
+    <div class="footer-note">© 2026 NeoXe OS — 纯净美观 · 多场景覆盖</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
