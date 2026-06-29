@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>XeRiver的小窝</title>
+    <link rel="icon" href="./img/logo.gif" type="image/gif">
+    <link rel="stylesheet" href="./fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-title">
+            <img src="./img/logo.gif" alt="Logo" class="nav-logo">
+            <span>XeRiver的小窝</span>
+        </div>
+        <div>
+            <button class="hamburger" id="hamburgerBtn" aria-label="菜单">
+                <i class="fas fa-bars" id="hamburgerIcon"></i>
+            </button>
+            <div class="menu-dropdown" id="menuDropdown">
+                <button class="menu-item active" data-page="home">🏠 主页</button>
+                <button class="menu-item" data-page="about">📖 关于</button>
+                <button class="menu-item" data-page="archive">📂 归档</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <!-- 主页 -->
+        <div id="page-home" class="page-panel active">
+            <div id="postList"></div>
+        </div>
+
+        <!-- 关于页 -->
+        <div id="page-about" class="page-panel">
+            <div class="about-text">
+                <p>你好呀，这里是 <strong>XeRiver</strong> 的小窝。</p>
+                <p>喜欢倒腾系统、PE、RAMOS，偶尔写写代码，记录生活点滴。</p>
+                <p>这里没有广告，没有花哨，只有干净的文字和思考。</p>
+                <p>感谢你的来访，愿你在这里找到片刻安宁。</p>
+                <p style="margin-top: 1.2rem; color: #888; font-size: 0.9rem;">
+                    <i class="fas fa-envelope"></i> 联系：3794631834@qq.com
+                </p>
+            </div>
+        </div>
+
+        <!-- 归档页 -->
+        <div id="page-archive" class="page-panel">
+            <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color:#000;">📂 文章归档</h2>
+            <ul class="archive-list" id="archiveList"></ul>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        © 2026 · 保持简洁 · 记录纯粹
+    </div>
+
+    <!-- 主页脚本 -->
+    <script src="script.js"></script>
+</body>
+</html>
