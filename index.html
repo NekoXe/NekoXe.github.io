@@ -19,16 +19,23 @@
 </div>
 <div class="win11-container">
     <div class="app-header">
-        <div class="logo-area">
-            <!-- logo 图片为 PNG -->
-            <img src="/img/logo.png" alt="logo" class="logo-img" onerror="this.src='';"> 
-            <span class="logo-text">NeoXe OS</span>
+    <div class="logo-area">
+        <img src="./img/logo.png" alt="logo" class="logo-img" onerror="this.src='';"> 
+        <span class="logo-text">NeoXe OS</span>
+    </div>
+    <div class="header-controls">
+        <!-- 新增：高级质感开关 -->
+        <div class="quality-toggle" id="qualityToggle" title="切换高级质感（背景动画、毛玻璃、光影）">
+            <span class="toggle-label">高级质感</span>
+            <span class="toggle-status on" id="qualityStatus">ON</span>
         </div>
+        <!-- 原有的主题切换 -->
         <div class="theme-switch" id="themeToggleBtn">
             <i id="themeIcon" class="fas fa-sun"></i>
             <span id="themeLabel">浅色</span>
         </div>
     </div>
+</div>
     <div class="nav-bar">
         <button class="nav-btn active" data-page="home"><i class="fas fa-home"></i> 主页</button>
         <button class="nav-btn" data-page="series"><i class="fas fa-layer-group"></i> 系列</button>

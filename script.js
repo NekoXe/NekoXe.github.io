@@ -1,4 +1,30 @@
 (function() {
+    // ===== 高级质感开关 =====
+    const qualityToggle = document.getElementById('qualityToggle');
+    const qualityStatus = document.getElementById('qualityStatus');
+    if (qualityToggle && qualityStatus) {
+        const savedQuality = localStorage.getItem('neoxe_quality');
+        const isOn = savedQuality !== 'off';
+        function applyQuality(on) {
+            if (on) {
+                document.body.classList.remove('simplified');
+                qualityStatus.textContent = 'ON';
+                qualityStatus.className = 'toggle-status on';
+                localStorage.setItem('neoxe_quality', 'on');
+            } else {
+                document.body.classList.add('simplified');
+                qualityStatus.textContent = 'OFF';
+                qualityStatus.className = 'toggle-status off';
+                localStorage.setItem('neoxe_quality', 'off');
+            }
+        }
+        applyQuality(isOn);
+        qualityToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const currentlyOn = !document.body.classList.contains('simplified');
+            applyQuality(!currentlyOn);
+        });
+    }
     // 主题切换
     const themeBtn = document.getElementById('themeToggleBtn');
     const bodyEl = document.body;

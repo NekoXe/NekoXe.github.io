@@ -100,6 +100,48 @@ button:focus, button:focus-visible, .nav-btn:focus, .theme-switch:focus,
 }
 
 /* ===== 主题变量 ===== */
+/* ===== 高级质感开关样式 ===== */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.quality-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    background: rgba(128,128,128,0.08);
+    border: 1px solid var(--card-border);
+    border-radius: 40px;
+    padding: 4px 12px;
+    height: 32px;
+    box-shadow: var(--card-inset), 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+    user-select: none;
+    white-space: nowrap;
+}
+.quality-toggle:hover {
+    background: var(--setting-hover);
+    transform: translateY(-1px);
+}
+.quality-toggle .toggle-label {
+    color: var(--text-secondary);
+}
+.quality-toggle .toggle-status {
+    font-weight: 600;
+    padding: 0 4px;
+    border-radius: 4px;
+    transition: color 0.2s;
+}
+.quality-toggle .toggle-status.on {
+    color: var(--accent);
+}
+.quality-toggle .toggle-status.off {
+    color: #e74c3c;
+}
 :root {
     --bg-body: #F3F5F9;
     --card-bg: rgba(255, 255, 255, 0.78);
@@ -489,4 +531,52 @@ body {
         margin-left: 0 !important;
         align-self: flex-start;
     }
+}
+/* ===== 简化模式（高级质感 OFF） ===== */
+body.simplified .bg-blobs {
+    display: none !important;
+}
+body.simplified .win11-container {
+    backdrop-filter: none !important;
+    background: var(--card-bg) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+}
+body.simplified .setting-section,
+body.simplified .version-detail-inner,
+body.simplified .qa-answer-inner {
+    backdrop-filter: none !important;
+    background: var(--card-bg) !important;
+}
+body.simplified .setting-section {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+    transform: none !important;
+}
+body.simplified .setting-section:hover {
+    transform: none !important;
+}
+body.simplified .version-summary:hover {
+    transform: none !important;
+}
+body.simplified * {
+    animation: none !important;
+    transition: none !important;
+}
+body.simplified .blob {
+    animation: none !important;
+    opacity: 0 !important;
+}
+body.simplified .win11-container {
+    border-radius: 16px !important;
+}
+body.simplified .setting-section {
+    border-radius: 16px !important;
+}
+body.simplified .version-detail-wrapper {
+    transition: none !important;
+}
+body.simplified .qa-answer-wrapper {
+    transition: none !important;
+}
+body.simplified.dark .win11-container {
+    background: var(--card-bg) !important;
 }
