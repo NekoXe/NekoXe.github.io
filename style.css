@@ -99,10 +99,15 @@ body {
 /* ===== 菜单下拉 ===== */
 .menu-dropdown {
     position: absolute;
-    top: 80px;
-    right: 25px;
-    background: #ffffff;
-    border: 1px solid #ddd;
+    top: 60px;
+    right: 20px;
+    /* 改为与标题栏相同的淡蓝色，透明度85% */
+    background: rgba(212, 237, 255, 0.85);
+    /* 添加毛玻璃效果，与标题栏一致 */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    /* 边框颜色调淡，与标题栏边框风格一致 */
+    border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     min-width: 160px;
